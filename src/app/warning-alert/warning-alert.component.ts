@@ -4,13 +4,27 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-warning-alert',
   templateUrl: './warning-alert.component.html',
   styleUrls: ['./warning-alert.component.css'],
+  styles: [
+    `
+      .white-text {
+        color: white;
+      }
+    `,
+  ],
 })
 export class WarningAlertComponent implements OnInit {
-  userName: string = '';
+  secretPassword = 'Tuna';
+  showDetails = false;
+  toggleCount = 0;
+  logs = [];
   constructor() {}
-
-  onSubmitUserName = () => {
-    this.userName = '';
-  };
+  toggleDisplay() {
+    this.showDetails = !this.showDetails;
+    this.toggleCount += 1;
+    this.logs.push(Date.now());
+  }
+  getBackGroundColor() {
+    return this.toggleCount >= 5 ? 'blue' : '';
+  }
   ngOnInit(): void {}
 }

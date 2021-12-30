@@ -1,6 +1,6 @@
 <!-- <h3 class="text-danger">Warning!</h3> -->
 
-<input class="form-control" type="text" [(ngModel)]="userName" />
+<!-- <input class="form-control" type="text" [(ngModel)]="userName" />
 <p>{{ userName }}</p>
 <button
   class="btn btn-success btn-sm"
@@ -8,4 +8,18 @@
   (click)="onSubmitUserName()"
 >
   Reset
+</button> -->
+
+<button class="btn btn-primary btn-sm" (click)="toggleDisplay()">
+  Display details
 </button>
+<p *ngIf="showDetails">{{ "Password : " + secretPassword }}</p>
+<h3>Logs</h3>
+<div *ngFor="let log of logs">
+  <p
+    [ngStyle]="{ backgroundColor: getBackGroundColor() }"
+    [ngClass]="{ 'white-text': toggleCount >= 5 }"
+  >
+    {{ log }}
+  </p>
+</div>
