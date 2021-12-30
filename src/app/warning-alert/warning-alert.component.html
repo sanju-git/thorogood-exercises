@@ -1,1 +1,11 @@
-<h3 class="text-danger">Warning!</h3>
+<!-- <h3 class="text-danger">Warning!</h3> -->
+
+<input class="form-control" type="text" [(ngModel)]="userName" />
+<p>{{ userName }}</p>
+<button
+  class="btn btn-success btn-sm"
+  [disabled]="!userName"
+  (click)="onSubmitUserName()"
+>
+  Reset
+</button>
