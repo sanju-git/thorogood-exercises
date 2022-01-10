@@ -14,6 +14,8 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { GameControlComponent } from './game-control/game-control.component';
 import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
+import { DropdownDirective } from './shared/dropdown.directive';
+import { ShoppingListService } from './shopping-list/services/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,11 @@ import { EvenComponent } from './even/even.component';
     ShoppingEditComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    DropdownDirective,
   ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule],
+  providers: [ShoppingListService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

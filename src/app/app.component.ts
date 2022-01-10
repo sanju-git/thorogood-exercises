@@ -6,13 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  oddNumbers: number[] = [];
-  evenNumbers: number[] = [];
-  onIntervalFired = (lastNumber) => {
-    if (lastNumber % 2 == 0) {
-      this.evenNumbers.push(lastNumber);
-    } else {
-      this.oddNumbers.push(lastNumber);
-    }
+  option: string = 'recipes';
+  onChangeOption = (option) => {
+    this.option = option;
   };
+
+  // oddNumbers: number[] = [];
+  // evenNumbers: number[] = [];
+  // onIntervalFired = (lastNumber) => {
+  //   if (lastNumber % 2 == 0) {
+  //     this.evenNumbers.push(lastNumber);
+  //   } else {
+  //     this.oddNumbers.push(lastNumber);
+  //   }
+  // };
 }
