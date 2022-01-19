@@ -16,6 +16,8 @@ import { OddComponent } from './odd/odd.component';
 import { EvenComponent } from './even/even.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/services/shopping-list.service';
+import { AppRoutingModule } from './app-routing.module';
+import { RecipesLandingComponent } from './recipes/recipes-landing/recipes-landing.component';
 
 @NgModule({
   declarations: [
@@ -32,8 +34,9 @@ import { ShoppingListService } from './shopping-list/services/shopping-list.serv
     OddComponent,
     EvenComponent,
     DropdownDirective,
+    RecipesLandingComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule],
   providers: [ShoppingListService],
   bootstrap: [AppComponent],
 })

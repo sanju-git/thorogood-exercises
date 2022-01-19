@@ -2,20 +2,9 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="option === 'recipes'"></app-recipes>
-      <app-shopping-list *ngIf="option === 'shopping'"></app-shopping-list>
+      <router-outlet></router-outlet>
+      <!-- <app-recipes *ngIf="option === 'recipes'"></app-recipes>
+      <app-shopping-list *ngIf="option === 'shopping'"></app-shopping-list> -->
     </div>
   </div>
 </div>
-<!-- <div>
-  <app-game-control
-    (intervalFired)="onIntervalFired($event)"
-  ></app-game-control>
-</div>
-<div>
-  <app-odd *ngFor="let OddNumber of oddNumbers" [number]="OddNumber"></app-odd>
-  <app-even
-    *ngFor="let evenNumber of evenNumbers"
-    [number]="evenNumber"
-  ></app-even>
-</div> -->
